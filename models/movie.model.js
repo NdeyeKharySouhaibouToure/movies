@@ -1,9 +1,9 @@
 module.exports = mongoose => {
   var schema = mongoose.Schema(
     {
-      name: String,
-      course: String,
-      registered: Boolean,
+      id: String,
+      title: String,
+      release: Boolean,
     },
     { timestamps: true }
   );
@@ -14,6 +14,6 @@ module.exports = mongoose => {
     return object;
   });
 
-  const Student = mongoose.model("student", schema);
-  return Student;
+  const movie = mongoose.model("movie", schema);
+  return movie;
 };

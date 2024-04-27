@@ -4,7 +4,7 @@ const app = express();
 
 const logger = require("morgan");
 
-const PORT = process.env.PORT || 4002;
+const PORT = process.env.PORT || 4000;
 
 const db = require("./models");
 
@@ -26,10 +26,10 @@ db.mongoose
 
 app.use(logger("dev"));
 
-require("./routes/student.routes")(app);
+require("./routes/movie.routes")(app);
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to glsi students application." });
+  res.json({ message: "Welcome to movies application." });
 });
 
 app.listen(PORT, () => {
